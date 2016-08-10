@@ -1,0 +1,22 @@
+{
+  "extensionName": {
+    "message": "Diki.pl tłumaczenie",
+    "description": "Name of the extension."
+  },
+
+  "extensionDescription": {
+    "message": "Dodatkowe pole w menu kontekstowym do otwierania tłumaczenia diki.pl",
+    "description": "Description of the add-on."
+  },
+
+  "contextMenuItemSelectionLogger": {
+    "message": "Log '%s' to the browser console",
+    "description": "Title of context menu item that logs the selected text when clicked."
+  },
+
+  "contextMenuItemSelectionDiki": {
+    "message": "Otwórz tłumaczenie diki.pl",
+    "description": "Opens new window with diki.pl page."
+  }
+
+}
