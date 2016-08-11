@@ -3,11 +3,6 @@
  We'll just log success/failure here.
  */
 function onCreated(n) {
-    if (chrome.runtime.lastError) {
-        console.log("error creating item:" + chrome.runtime.lastError);
-    } else {
-        console.log("item created successfully");
-    }
 }
 
 /*
@@ -15,11 +10,6 @@ function onCreated(n) {
  We'll just log success or failure here.
  */
 function onRemoved() {
-    if (chrome.runtime.lastError) {
-        console.log("error removing item:" + chrome.runtime.lastError);
-    } else {
-        console.log("item removed successfully");
-    }
 }
 
 /*
