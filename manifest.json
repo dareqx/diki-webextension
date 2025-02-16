@@ -25,6 +25,16 @@
     "16": "icons/diki16.png",
     "32": "icons/diki32.png",
     "48": "icons/diki48.png"
+  },
+  
+  "commands": {
+    "open-url": {
+      "suggested_key": {
+        "default": "Ctrl+Shift+D",
+        "mac": "Command+Shift+D"
+      },
+      "description": "Open URL with selected text"
+    }
   }
 
 }
