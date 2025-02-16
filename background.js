@@ -42,3 +42,32 @@ chrome.contextMenus.onClicked.addListener(function (info, tab) {
             break;
     }
 });
+
+browser.commands.onCommand.addListener((command) => {
+  if (command === "open-url") {
+    browser.tabs.query({ active: true, currentWindow: true }).then((tabs) => {
+      const currentTab = tabs[0];
+      if (currentTab) {
+        browser.scripting.executeScript({
+          target: { tabId: currentTab.id },
+          func: getSelectedText
+        }).then((results) => {
+          if (results[0]?.result) {
+            const selectedText = results[0].result;
+            const baseURL = "https://example.com/search?q=";
+            const encodedText = encodeURIComponent(selectedText);
+            browser.tabs.create({ url: baseURL + encodedText });
+          }
+        }).catch((error) => {
+          console.error("Error executing script:", error);
+        });
+      }
+    }).catch((error) => {
+      console.error("Error querying tabs:", error);
+    });
+  }
+});
+
+function getSelectedText() {
+  return window.getSelection().toString().trim();
+}
