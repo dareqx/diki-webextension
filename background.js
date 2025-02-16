@@ -54,7 +54,7 @@ browser.commands.onCommand.addListener((command) => {
         }).then((results) => {
           if (results[0]?.result) {
             const selectedText = results[0].result;
-            const baseURL = "https://example.com/search?q=";
+            const baseURL = "http://diki.pl/";
             const encodedText = encodeURIComponent(selectedText);
             browser.tabs.create({ url: baseURL + encodedText });
           }
