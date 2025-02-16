@@ -1,13 +1,13 @@
 {
 
   "manifest_version": 2,
-  "name": "Diki.pl translation",
+  "name": "Diki.pl translation 2",
   "version": "1.1",
   "default_locale": "pl",
 
   "applications": {
     "gecko": {
-      "id": "diki-webextension@hyden.pl",
+      "id": "diki-webextension2@hyden.pl",
       "strict_min_version": "45.0"
     }
   },
